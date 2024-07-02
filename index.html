@@ -55,8 +55,8 @@
             const utcTime = now.toUTCString();
             const dayOfWeek = now.toLocaleString('en-US', { weekday: 'long' });
 
-            document.getElementById('currentTimeUTC').innerText = `Current Time (UTC): ${utcTime}`;
-            document.getElementById('currentDay').innerText = `Today is: ${dayOfWeek}`;
+            document.getElementById('currentTimeUTC').innerHTML = `<strong>Current Time (UTC):</strong> ${utcTime}`;
+            document.getElementById('currentDay').innerHTML = `<strong>Today is:</strong> ${dayOfWeek}`;
         }
 
         updateTimeAndDay();
