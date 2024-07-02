@@ -1,0 +1,162 @@
+body {
+  background: linear-gradient(to bottom left, #ffe600, #66e300);
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  margin: 0;
+  background: linear-gradient(
+    45deg,
+    #007200,
+    #007f00,
+    #005200,
+    #006300,
+    #000000
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  background-clip: text;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+img {
+  width: 100%;
+  max-width: 2016px;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 50px;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  margin: 0;
+  color: #000000;
+}
+
+footer {
+  background-color: #000000;
+  padding: 40px 0;
+}
+
+footer h3 {
+  color: #6aff00;
+}
+
+.container {
+  padding: 10px;
+  display: grid;
+  grid-template-rows: auto;
+  margin: 20px 0;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 20px;
+}
+
+.second-column {
+  padding: 0 40px;
+}
+
+.email {
+  color: rgb(0, 62, 194);
+  font-weight: 500;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links a {
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #989797;
+}
+
+@media (min-width: 440px) {
+  h1 {
+    font-size: 64px;
+    line-height: 1;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 40px;
+    line-height: 0.8;
+    text-align: center;
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 20px 0;
+  }
+
+  li {
+    font-size: 24px;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+  }
+
+  .second-column h3{
+    font-size: 30px;
+    margin-top: 45px;
+    margin-bottom: 0;
+  }
+
+  .date {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    font-size: 22px;
+    line-height: 1.5;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: 440px) and (max-width: 574px) {
+  h2 {
+    text-align: center;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 20px;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
