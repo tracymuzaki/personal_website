@@ -11,9 +11,9 @@ h1 {
   background: linear-gradient(
     45deg,
     #007200,
-    #007f00,
+    #004900,
     #005200,
-    #006300,
+    #004800,
     #000000
   );
   -webkit-background-clip: text;
@@ -90,6 +90,18 @@ footer h3 {
   color: #989797;
 }
 
+.links a:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
 @media (min-width: 440px) {
   h1 {
     font-size: 64px;
@@ -119,18 +131,14 @@ footer h3 {
     gap: 20px;
   }
 
-  .second-column h3{
+  .second-column h3 {
     font-size: 30px;
     margin-top: 45px;
     margin-bottom: 0;
   }
 
   .date {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
     font-size: 22px;
-    line-height: 1.5;
   }
 
   .links {
@@ -142,7 +150,11 @@ footer h3 {
   }
 }
 
-@media (min-width: 440px) and (max-width: 574px) {
+@media (min-width: 100px) and (max-width: 883px) {
+  h1 {
+    text-align: center;
+  }
+
   h2 {
     text-align: center;
   }
@@ -158,5 +170,12 @@ footer h3 {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .date {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    line-height: 1.5;
   }
 }
