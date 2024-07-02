@@ -49,19 +49,7 @@
             <a href="http://scrapeanyweb.site/" data-testid="scrapeanywebLink" target="_blank">scrapeanyweb.site</a>
         </div>
     </footer>
-    <script>
-        function updateTimeAndDay() {
-            const now = new Date();
-            const utcTime = now.toUTCString();
-            const dayOfWeek = now.toLocaleString('en-US', { weekday: 'long' });
-
-            document.getElementById('currentTimeUTC').innerHTML = `<strong>Current Time (UTC):</strong> ${utcTime}`;
-            document.getElementById('currentDay').innerHTML = `<strong>Today is:</strong> ${dayOfWeek}`;
-        }
-
-        updateTimeAndDay();
-        setInterval(updateTimeAndDay, 60000);
-    </script>
+    <script src="src/app.js"></script>
 </body>
 
 </html>
