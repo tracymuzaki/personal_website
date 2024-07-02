@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A simple single-page website outlining my goals for the next 2 years in the tech field as a frontend developer.">
+    <title>Frontend Developer: My tech goals for the next 2 years</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="first-column">
+                <img src="/images/tracy.jpg" alt="Slack Profile Picture" data-testid="slackProfilePicture" width="2016"
+                    height="4480">
+            </div>
+            <div class="second-column">
+                <h2>👋 Hi, I am</h2>
+                <h1 data-testid="slackDisplayName">MUZAKI TRACY</h1>
+                <h3>My Tech Goals for the Next 2 Years:</h3>
+                <ul>
+                    <li>🔸Master advanced JavaScript frameworks such as React and Vue.js</li>
+                    <li>🔸Contribute to open-source projects regularly</li>
+                    <li>🔸Improve skills in responsive design and accessibility</li>
+                    <li>🔸Build and deploy several full-stack applications</li>
+                </ul>
+                <p><b>Contact me:</b> 📧 <a href="mailto:tracymuzaki12@gmail.com" data-testid="slackEmail"
+                        class="email">tracymuzaki12@gmail.com</a></p>
+                <div class="date">
+                    <span data-testid="currentTimeUTC" id="currentTimeUTC"></span>
+                    <span data-testid="currentDay" id="currentDay"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="links">
+            <h3>Check out the links:</h3>
+            <a href="http://hng.tech/learn" data-testid="hngLink" target="_blank">hng.tech/learn.</a>
+            <a href="http://keyword.dog/" data-testid="keywordLink" target="_blank">keyword.dog</a>
+            <a href="http://scrapeanyweb.site/" data-testid="scrapeanywebLink" target="_blank">scrapeanyweb.site</a>
+        </div>
+    </footer>
+    <script>
+        function updateTimeAndDay() {
+            const now = new Date();
+            const utcTime = now.toUTCString();
+            const dayOfWeek = now.toLocaleString('en-US', { weekday: 'long' });
+
+            document.getElementById('currentTimeUTC').innerText = `Current Time (UTC): ${utcTime}`;
+            document.getElementById('currentDay').innerText = `Today is: ${dayOfWeek}`;
+        }
+
+        updateTimeAndDay();
+        setInterval(updateTimeAndDay, 60000);
+    </script>
+</body>
+
+</html>
